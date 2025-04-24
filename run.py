@@ -43,7 +43,7 @@ def delete_all_tweets():
                             # 点击删除按钮
                             delete_button = page.wait_for_selector(
                                 '[data-testid="Dropdown"] [role="menuitem"]',
-                                timeout=5000
+                                timeout=50000
                             )
                             if delete_button:
                                 delete_button.click()
@@ -52,7 +52,7 @@ def delete_all_tweets():
                             # 确认删除
                             confirm_button = page.wait_for_selector(
                                 '[data-testid="confirmationSheetConfirm"]',
-                                timeout=5000
+                                timeout=50000
                             )
                             if confirm_button:
                                 confirm_button.click()
